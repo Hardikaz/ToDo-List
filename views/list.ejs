@@ -1,0 +1,54 @@
+<%- include("header") -%>
+<body>
+    <!-- <h1>Namstey World!!!</h1>
+    <p>Bus bhai aa gya server chalana</p>
+    <p>Today is <%= workList %></p> -->
+<!-- 
+    <% if(workList ==="Saturday" || workList==="Sunday"){ %>
+        <h1 style="color: hotpink;"> <%= workList %> to do List</h1>
+        <% }else{ %>
+
+<h1 style="color: green;"><%= workList %> to do List</h1>
+       <% } %> -->
+
+
+
+
+
+      <div class="box" id="heading">
+        <%= workList %>
+      
+    </div>
+
+      <div class="box">
+        <% for(var i=0;i<newItem.length;i++){ %>
+          
+            <div class="item">
+                <input type="checkbox" >
+               <p> <%= newItem[i] %> </p>
+            </div>
+        
+            <% } %>
+            <form class="item" action="/" method="post">
+                <input type="text" name="inputValue" placeholder="New item">
+                <button type="submit" name="list" value="<%= workList%>">+</button>
+               </form>
+      </div>
+
+      
+
+<!-- <ul>
+    <li>Have Dinner</li>
+    <li>Go for a walk</li>
+    <li>Sleep early</li>
+    <li>Wake up early</li>
+    <li> <%= newItem %> </li>
+
+  
+</ul> -->
+
+
+<%- include("footer") -%>
+
+</body>
+</html>
